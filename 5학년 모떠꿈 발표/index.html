@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 평산초 5학년 1학기 운영 결과 보고서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals & Soft Greens -->
+    <!-- Application Structure Plan: A single-page application with a top navigation bar for smooth scrolling to three thematic sections: Overview, 1st Semester Review, and 2nd Semester Plan. This structure breaks down the report into logical, digestible parts, making it more user-friendly and engaging than a linear document. Each section uses a card-based layout to present individual projects and topics clearly. This design choice prioritizes intuitive navigation and scannability of key information. -->
+    <!-- Visualization & Content Choices: Report sections are mapped to interactive cards with icons and key-point lists. Info: 1st Sem Projects; Goal: Inform/Organize; Viz: Cards with icons (🚀, 🥔); Interaction: Hover; Justification: Easy comparison. Info: Student Life; Goal: Highlight; Viz: Prominent quote card; Justification: Emphasizes positive outcome. Info: 2nd Sem Projects; Goal: Inform; Viz: Cards with icons (🐦, 📜); Justification: Clear future view. The report is qualitative, so no data charts are used. All visuals are created with HTML/Tailwind. No SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .nav-item {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #34d399;
+            transition: width 0.3s;
+        }
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-xl font-bold text-emerald-600">평산초 5학년</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#semester1" class="nav-item text-stone-600 hover:text-emerald-500 px-3 py-2 rounded-md text-sm font-medium">1학기 돌아보기</a>
+                        <a href="#semester2" class="nav-item text-stone-600 hover:text-emerald-500 px-3 py-2 rounded-md text-sm font-medium">2학기 내다보기</a>
+                        <a href="#summary" class="nav-item text-stone-600 hover:text-emerald-500 px-3 py-2 rounded-md text-sm font-medium">마무리</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-stone-500 hover:text-white hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#semester1" class="block text-stone-600 hover:bg-emerald-500 hover:text-white px-3 py-2 rounded-md text-base font-medium">1학기 돌아보기</a>
+                <a href="#semester2" class="block text-stone-600 hover:bg-emerald-500 hover:text-white px-3 py-2 rounded-md text-base font-medium">2학기 내다보기</a>
+                <a href="#summary" class="block text-stone-600 hover:bg-emerald-500 hover:text-white px-3 py-2 rounded-md text-base font-medium">마무리</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-stone-800 leading-tight">2025학년도 평산초등학교 5학년</h1>
+                <p class="mt-4 text-xl md:text-2xl font-semibold text-emerald-600">1학기 모떠꿈 운영 결과 보고</p>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-stone-600">
+                    지난 1학기 동안 우리 5학년 학생들은 교과와 삶을 연계한 다채로운 프로젝트를 통해 함께 배우고 성장했습니다. 이 보고서는 1학기의 주요 활동 내용과 결과를 공유하고, 다가올 2학기의 알찬 계획을 안내하기 위해 제작되었습니다. 학생들의 빛나는 성장 과정을 함께 확인해 주세요.
+                </p>
+            </div>
+        </section>
+
+        <section id="semester1" class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-stone-800">1학기 돌아보기</h2>
+                    <p class="mt-2 text-lg text-stone-500">배움과 나눔이 가득했던 시간</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1">
+                        <div class="p-8">
+                            <div class="flex items-center">
+                                <span class="text-4xl mr-4">🚀</span>
+                                <h3 class="text-2xl font-bold text-stone-800">우주 프로젝트</h3>
+                            </div>
+                            <p class="mt-4 text-stone-600">과학 '태양계와 별' 단원을 중심으로 국어, 미술 교과를 연계하여 우주에 대한 탐구심과 상상력을 키웠습니다.</p>
+                            <div class="mt-6">
+                                <span class="inline-block bg-sky-100 text-sky-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">#과학</span>
+                                <span class="inline-block bg-amber-100 text-amber-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">#국어</span>
+                                <span class="inline-block bg-rose-100 text-rose-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">#미술</span>
+                            </div>
+                            <div class="mt-6 border-t pt-4">
+                                <p class="text-sm font-semibold text-stone-700">주요 활동</p>
+                                <p class="text-sm text-stone-500 mt-1">놂삶앎 축제에서 반별 프로젝트 과정 발표</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1">
+                        <div class="p-8">
+                            <div class="flex items-center">
+                                <span class="text-4xl mr-4">🥔</span>
+                                <h3 class="text-2xl font-bold text-stone-800">생태 프로젝트</h3>
+                            </div>
+                            <p class="mt-4 text-stone-600">실과 '식물 가꾸기' 단원과 연계하여 감자를 직접 키우고, 수확한 감자로 요리 수업까지 진행하며 생명의 소중함을 배웠습니다.</p>
+                             <div class="mt-6">
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">#실과</span>
+                                <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">#요리</span>
+                            </div>
+                             <div class="mt-6 border-t pt-4">
+                                <p class="text-sm font-semibold text-stone-700">주요 활동</p>
+                                <p class="text-sm text-stone-500 mt-1">'흑백요리사' 컨셉 요리 수업으로 마무리</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-400 to-green-500 text-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1 p-8 flex flex-col justify-center items-center text-center transform hover:-translate-y-1">
+                        <span class="text-5xl">👍</span>
+                        <h3 class="text-2xl font-bold mt-4">함께한 생활</h3>
+                        <p class="mt-2 text-lg font-semibold italic">"이런 아이 또 없습니다"</p>
+                        <p class="mt-4 text-green-100">큰 사건이나 사고, 학부모 민원 없이 한 학기를 평온하게 마무리했습니다. 서로를 존중하고 배려하는 선한 학생들이 만들어낸 값진 결과입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="semester2" class="py-16 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-stone-800">2학기 내다보기</h2>
+                    <p class="mt-2 text-lg text-stone-500">새로운 배움으로의 도약</p>
+                </div>
+                 <p class="mt-6 mb-12 max-w-3xl mx-auto text-center text-stone-600">
+                    1학기의 성공적인 경험을 바탕으로 2학기에는 더욱 심화되고 확장된 프로젝트 학습을 계획하고 있습니다. 학생들이 지역 사회와 역사에 대해 깊이 탐구하며 한 뼘 더 성장할 수 있도록 지원하겠습니다.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-stone-100/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1">
+                        <div class="p-8">
+                            <div class="flex items-center">
+                                <span class="text-4xl mr-4">🐦</span>
+                                <h3 class="text-2xl font-bold text-stone-800">회야강 탐조 프로젝트</h3>
+                            </div>
+                            <p class="mt-4 text-stone-600">우리 고장의 아름다운 회야강을 직접 찾아 새를 관찰하고 배우며, 지역 생태에 대한 이해와 관심을 높입니다.</p>
+                            <div class="mt-6">
+                                <p class="text-sm font-semibold text-stone-700">진행 기간</p>
+                                <p class="text-sm text-stone-500 mt-1">9월 ~ 10월 (주 1회)</p>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-stone-700">연계 활동</p>
+                                <p class="text-sm text-stone-500 mt-1">행복마을학교 체험으로 마무리 학습</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-stone-100/50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1">
+                        <div class="p-8">
+                            <div class="flex items-center">
+                                <span class="text-4xl mr-4">📜</span>
+                                <h3 class="text-2xl font-bold text-stone-800">역사 프로젝트</h3>
+                            </div>
+                            <p class="mt-4 text-stone-600">역사를 중심으로 음악, 체육을 융합하여 과거를 생생하게 체험하고, 역사적 상상력을 키우는 통합 프로젝트입니다.</p>
+                            <div class="mt-6">
+                                <p class="text-sm font-semibold text-stone-700">음악 연계</p>
+                                <p class="text-sm text-stone-500 mt-1">역사 뮤지컬 제작 및 발표</p>
+                            </div>
+                            <div class="mt-4">
+                                <p class="text-sm font-semibold text-stone-700">체육 연계</p>
+                                <p class="text-sm text-stone-500 mt-1">역사 상황 가정 게임, 학년별 역사 체육대회</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-stone-800">마무리하며</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-stone-600">
+                    1학기 동안 보여준 학생들의 열정과 성장에 감사하며, 2학기에도 변함없는 관심과 격려를 부탁드립니다. 학생들이 즐겁게 배우고 건강하게 성장할 수 있도록 5학년 선생님 모두가 최선을 다해 지원하겠습니다. 감사합니다.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-stone-800 text-white">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 평산초등학교 5학년. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 70) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes(current) && current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
